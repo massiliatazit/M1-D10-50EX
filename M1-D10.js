@@ -32,11 +32,75 @@ console.log(arr)
 const arr1 = Array.from('abcdefghij')
 console.log(arr1)
 
-const arr2 = [...Array(99)].map(() => Math.floor(Math.random ()* 100));// map() create a new array from the result of a new function
+const arr2 = [...Array(100)].map(() => Math.floor(Math.random ()* 100));// map() create a new array from the result of a new function
 console.log(arr2)
+//SECOND OPTION
+
+ function arrayrandom() {
+    
+
+ arr3 =[];
+  for(i=0;i<100;i++){
+    
+    const num =  Math.floor(Math.random ()* 100);
+    arr3.push(num);
+ }
+
+  console.log( 'OPTION2' , arr3)
+}
+arrayrandom()
 
 
-console.log (Math.min(...arr2))
-console.log(Math.max(...arr2))
+function min_max(){
 
+    console.log (Math.min(...arr2))
+    console.log(Math.max(...arr2))  
+}
+min_max()
 
+let first_array = [...Array(10)].map(() => Math.floor(Math.random ()* 10))
+let second_array = [...Array(10)].map(() => Math.floor(Math.random ()* 10))
+let third_array = [];
+third_array.push(first_array)
+third_array.push(second_array)
+console.log(third_array);
+
+function longest_array() {
+
+    if (first_array.length < arr2.length){
+
+        return arr2
+    }else{
+        return first_array;
+    }
+    
+}
+
+console.log('Longest array is : ', longest_array())
+
+function Highest_sum () {
+
+    sum1 = 0;
+    sum2 =0;
+ first_array.forEach(element => {
+     sum1+=element;
+     
+ });
+ arr2.forEach(element => {
+
+    sum2+=element;
+    
+     
+ });
+
+ if (sum1>sum2){
+
+    return first_array;
+ }else{
+
+    return arr2
+ }
+    
+
+}
+console.log('I have a higher sum ',Highest_sum())
