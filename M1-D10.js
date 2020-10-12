@@ -104,3 +104,93 @@ function Highest_sum () {
 
 }
 console.log('I have a higher sum ',Highest_sum())
+
+/*
+    ***********DOM**************
+
+
+
+
+
+
+
+
+40) Write a function to empty a list
+*/
+
+//31) Get element with ID "container" from the page
+const container = document.getElementById('container')
+
+
+//32) Get every "td" from the page
+const td = document.getElementsByTagNameNS('td')
+
+ //33) Create a cycle that prints the text inside every td of the page
+for(i=0;i<3;i++){
+   const tr = document.createElement('tr') //rows
+
+
+   for(j =0;j<3;j++){
+    
+    const td = document.createElement('td') // content of rows and columns
+    const celltext= document.createTextNode('ABCD')
+    td.appendchild(celltext);
+    tr.appendchild(td);
+
+   }
+}
+
+//34) Write a function to change the heading of the page
+function changeheading(){
+ const header = document.getElementsByTagName('h1')
+ header.innerHTML = 'change header of my page'
+
+}
+
+//35) Write a function to add an extra row to the table
+function addrows(){
+    const table = document.createElement('table')
+    const tbody = document.createElement('tbody')
+    for(i=0;i<3;i++){
+        const tr = document.createElement('tr') //create rows
+
+        tbody.appendChild(tr)
+    }
+}
+//36) Write a function to add the class "test" to each row in the table
+
+function addaclass(){
+
+ const row = document.getElementsByTagName('tr')
+    row.classList.add('test')
+
+}
+//37) Write a function to add a red background to every link in the page
+
+function changebackground(){
+   
+    const link = document.getElementsByTagName('a')
+    for(i=0;i<link.length;i++){
+
+        link[i].style.background.color = 'red' 
+    }
+   
+
+}
+
+//38) Console log "Page loaded" when the page is correctly loaded
+
+window.load = function (){
+    alert('Page loaded')
+   
+}
+//39) Write a function to add new items to a UL
+function addnew(){
+    const ul = document.getElementsByTagName('ul')
+    const il = document.createElement('li')
+    const item = document.createTextNode('Dress')
+    ul.appendChild('li')
+    il.appendChild('item')
+
+}
+
