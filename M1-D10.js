@@ -105,9 +105,9 @@ function Highest_sum () {
 }
 console.log('I have a higher sum ',Highest_sum())
 
-/*
-    ***********DOM**************
-*/
+
+    //***********DOM**************
+
 
 //31) Get element with ID "container" from the page
 const container = document.getElementById('container')
