@@ -3,7 +3,7 @@ JS EXERCISES
         21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
         22) Create an object with properties such name, surname, email
         23) Delete Email from the previously created object
-        24) Create an array with 10 strings in it
+       
         25) Print in the console every string in the previous array
         26) Create an array with 100 random numbers in it
         27) Wrote a function to get the MAX and the MIN from the previously created array
@@ -26,6 +26,7 @@ const info ={
 delete info.email 
 console.log(info)
 
+// 24) Create an array with 10 strings in it
 const arr = Array.from(Array(10).keys());
 console.log(arr)
 
@@ -79,18 +80,13 @@ function longest_array() {
 console.log('Longest array is : ', longest_array())
 
 function Highest_sum () {
-
     sum1 = 0;
     sum2 =0;
  first_array.forEach(element => {
-     sum1+=element;
-     
+     sum1+=element;   
  });
  arr2.forEach(element => {
-
-    sum2+=element;
-    
-     
+   sum2+=element;  
  });
 
  if (sum1>sum2){
@@ -100,8 +96,6 @@ function Highest_sum () {
 
     return arr2
  }
-    
-
 }
 console.log('I have a higher sum ',Highest_sum())
 
@@ -133,19 +127,19 @@ for(i=0;i<3;i++){
 
 //34) Write a function to change the heading of the page
 function changeheading(){
- const header = document.getElementsByTagName('h1')
+ const header = document.getElementsByTagName('h1')[0]
  header.innerHTML = 'change header of my page'
 
 }
 
 //35) Write a function to add an extra row to the table
 function addrows(){
-    const table = document.createElement('table')
-    const tbody = document.createElement('tbody')
+    const table = document.querySelector('table')
+   
     for(i=0;i<3;i++){
         const tr = document.createElement('tr') //create rows
 
-        tbody.appendChild(tr)
+        table.appendChild(tr)
     }
 }
 //36) Write a function to add the class "test" to each row in the table
@@ -153,7 +147,11 @@ function addrows(){
 function addaclass(){
 
  const row = document.getElementsByTagName('tr')
-    row.classList.add('test')
+  for(i=0;i<row.length;i++){
+    row[i].classList.add('test')
+
+  }
+   
 
 }
 //37) Write a function to add a red background to every link in the page
@@ -171,23 +169,22 @@ function changebackground(){
 //38) Console log "Page loaded" when the page is correctly loaded
 
 window.load = function (){
-    alert('Page loaded')
+    console.log('Page loaded')
    
 }
 //39) Write a function to add new items to a UL
 function addnew(){
-    const ul = document.getElementsByTagName('ul')
+    const ul = document.querySelector('ul')
     const li = document.createElement('li')
-    const item = document.createTextNode('Dress')
+    li.innerText ='text to write'
     ul.appendChild('li')
-    li.appendChild('item')
+
 }
 
 //40) Write a function to empty a list
 
 function emptylist(){
 
- const li = document.getElementsBy('li')
- li.removechild('item')
-
+ const ul = document.getElementsBy('ul')
+  ul.innerHTML =''
 }
