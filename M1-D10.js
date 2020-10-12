@@ -107,15 +107,6 @@ console.log('I have a higher sum ',Highest_sum())
 
 /*
     ***********DOM**************
-
-
-
-
-
-
-
-
-40) Write a function to empty a list
 */
 
 //31) Get element with ID "container" from the page
@@ -175,7 +166,6 @@ function changebackground(){
         link[i].style.background.color = 'red' 
     }
    
-
 }
 
 //38) Console log "Page loaded" when the page is correctly loaded
@@ -187,10 +177,17 @@ window.load = function (){
 //39) Write a function to add new items to a UL
 function addnew(){
     const ul = document.getElementsByTagName('ul')
-    const il = document.createElement('li')
+    const li = document.createElement('li')
     const item = document.createTextNode('Dress')
     ul.appendChild('li')
-    il.appendChild('item')
-
+    li.appendChild('item')
 }
 
+//40) Write a function to empty a list
+
+function emptylist(){
+
+ const li = document.getElementsBy('li')
+ li.removechild('item')
+
+}
